@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "form",
+    "description": "Extraer datos de un formulario",
+    "version": "1.0",
+    "permissions": ["scripting", "storage", "activeTab"],
+    "background": {
+      "service_worker": "scripts/background.js"
+    },
+    "host_permissions": [
+      "http://localhost/*",
+      "http://127.0.0.1/*"
+    ],
+    "content_scripts": [
+    {
+      "matches": ["https://automationintesting.com/selenium/testpage/*"],
+      "js": ["scripts/email.min.js","scripts/content.js", "scripts/form.js"],
+      "css": ["popup.css"]
+    }
+    ],
+    "action": {
+      "default_popup":"popup.html",
+      "default_icon": "images/icons/icon-16.png"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["scripts/email.min.js"],
+        "matches": ["<all_urls>"]
+      }],
+    "icons":{
+        "16": "images/icons/icon-16.png",
+        "32": "images/icons/icon-32.png",
+        "48": "images/icons/icon-48.png",
+        "128": "images/icons/icon-128.png"
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+  }
+  

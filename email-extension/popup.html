@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Popup de la Extensión</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="scripts/email.min.js"></script>
+</head>
+<body>
+  <article>
+    <form id="form-ext" action="" method="POST"></form>
+
+      <label for="Nombre">Nombre</label>
+      <input id="nombre" type="text" name="name">
+
+      <label for="email">Correo Electronico</label>
+      <input id="email" type="email" name="email">
+
+      <label for="subject">Asunto</label>
+      <input id="asunto" type="text" name="subject">
+
+      <label for="comments">Comentarios</label>
+      <textarea id="comentarios" name="comments" cols="15" rows="5" id=""></textarea>
+
+      <input id="submit-ext" type="submit" value="Enviar">
+
+    </form>
+
+  </article>
+  <script src="scripts/popup.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- "background": {
+  "service_worker": "scripts/popup.js"
+}, -->

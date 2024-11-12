@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    width: 220px;
+    padding: 10px;
+    align-items: center;
+    background-color: #000;
+}
+h1{
+    color: rgb(211, 211, 211);
+    font-size: 24px;
+
+}
+
+#miElemento{
+    color: rgb(30, 196, 57);
+    font-size: 20px;
+}

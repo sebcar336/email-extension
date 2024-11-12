@@ -1,0 +1,57 @@
+#popupDOM{
+    position: absolute;
+    background-Color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-Shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-Index: 999;
+    align-Items: center;
+    justify-content: space-evenly;
+}
+
+.messagePopup{
+    width: 50%;
+    max-height: fit-content;
+}
+
+.containerEmail{
+    width: 50%;
+}
+
+#emailFrom,#emailTo{
+    width: 90%;
+    margin: 5px;
+}
+
+.containerBtn{
+    width: 90%;
+    display: flex;
+    justify-content: end;
+}
+
+.btnSendPopup {
+    background-color: green;
+    height: 16px;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+    border: 0;
+    color: #fff;
+}
+  
+.btnClosePopup {
+    background-color: red;
+    height: 16px;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+    border: 0;
+    color: #fff;
+}

@@ -40,15 +40,15 @@ submit.addEventListener("click",(event)=>{
   event.preventDefault();
   guardarDatos();
   chrome.runtime.sendMessage({ type: "setData", value: data });
-  alert(`
-  Nombre: ${data[1]}
-  Apellido: ${data[2]}
-  Genero: ${data[3]}
-  Color Favorito: ${data[4]}
-  Contactar por: 
-      - Email: ${data[5]}
-      - SMS: ${data[6]}
-  Descripción: ${data[7]}
-  `);
+  // alert(`
+  // Nombre: ${data[1]}
+  // Apellido: ${data[2]}
+  // Genero: ${data[3]}
+  // Color Favorito: ${data[4]}
+  // Contactar por: 
+  //     - Email: ${data[5]}
+  //     - SMS: ${data[6]}
+  // Descripción: ${data[7]}
+  // `);
 
 });

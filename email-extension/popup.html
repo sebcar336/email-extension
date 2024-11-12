@@ -7,22 +7,22 @@
   <script src="scripts/email.min.js"></script>
 </head>
 <body>
-  <article>
+  <article class="window-extension">
     <form id="form-ext" action="" method="POST"></form>
 
-      <label for="Nombre">Nombre</label>
-      <input id="nombre" type="text" name="name">
+      <label for="emailFrom">De</label>
+      <input id="emailFrom" type="email" name="emailFrom" placeholder="Correo electronico">
 
-      <label for="email">Correo Electronico</label>
-      <input id="email" type="email" name="email">
+      <label for="emailTo">Para</label>
+      <input id="emailTo" type="email" name="email" placeholder="Correo electronico">
 
       <label for="subject">Asunto</label>
-      <input id="asunto" type="text" name="subject">
+      <input id="subject" type="text" name="subject">
 
       <label for="comments">Comentarios</label>
-      <textarea id="comentarios" name="comments" cols="15" rows="5" id=""></textarea>
+      <textarea id="message" name="comments" cols="20" rows="8" id=""></textarea>
 
-      <input id="submit-ext" type="submit" value="Enviar">
+      <button id="submit" type="submit" class="btnSendPopup">Enviar</button>
 
     </form>
 

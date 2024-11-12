@@ -1,9 +1,9 @@
 const form = document.getElementById("form-ext");
-const nameF = document.getElementById("nombre");
-const subject = document.getElementById("asunto");
-const emailTo = document.getElementById("email");
-const message = document.getElementById("comentarios");
-const submit = document.getElementById("submit-ext");
+const emailFrom = document.getElementById("emailFrom");
+const subject = document.getElementById("subject");
+const emailTo = document.getElementById("emailTo");
+const message = document.getElementById("message");
+const submit = document.getElementById("submit");
 
 function sanitizeInput(input) {
   return input.replace(/[<>]/g, ""); // Elimina caracteres problemáticos
@@ -27,13 +27,14 @@ chrome.runtime.sendMessage({ type: "getCopyData" }, (response) => {
 })();
 
 function sendMail() {
-  const sanitizedEmail = sanitizeInput(emailTo.value);
+  const sanitizedEmailFrom = sanitizeInput(emailFrom.value);
+  const sanitizedEmailTo = sanitizeInput(emailTo.value);
   const sanitizedSubject = sanitizeInput(subject.value);
   const sanitizedMessage = sanitizeInput(message.value);
 
   let params = {
-    nameF: nameF.value,
-    emailToF: sanitizedEmail,
+    emailFromF: sanitizedEmailFrom,
+    emailToF: sanitizedEmailTo,
     subjectF: sanitizedSubject,
     messageF: sanitizedMessage
   };

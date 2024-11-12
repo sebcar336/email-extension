@@ -13,7 +13,7 @@
     ],
     "content_scripts": [
     {
-      "matches": ["https://automationintesting.com/selenium/testpage/*"],
+      "matches": ["<all_urls>"],
       "js": ["scripts/email.min.js","scripts/content.js", "scripts/form.js"],
       "css": ["popup.css"]
     }

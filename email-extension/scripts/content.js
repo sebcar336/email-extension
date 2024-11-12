@@ -58,7 +58,7 @@ function ocultarPopup() {
 
 document.addEventListener("keypress", (event) => {
   const selectedText = window.getSelection().toString().trim();
-  if ((event.key === "m" || event.key === "M") && selectedText) {
+  if ((event.key === "|") && selectedText) {
     chrome.runtime.sendMessage({ type: "setCopyData", value: selectedText });
     message.textContent = selectedText;
     mostrarPopup(event);
@@ -82,7 +82,8 @@ function sendMail() {
     messageF: sanitizedMessage
   };
 
-  const serviceID = "service_kddnkzr";
+
+  const serviceID = "service_ouv07ss";
   const templateID = "template_h1nwbtr";
 
   emailjs.send(serviceID, templateID, params)
